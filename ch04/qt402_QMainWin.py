@@ -1,24 +1,22 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QIcon
+# -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file 'qt402_QMainWin.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.2
+#
+# WARNING! All changes made in this file will be lost!
 
+from PyQt5 import QtCore, QtGui, QtWidgets
 
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(400, 300)
 
-class MainForm(QMainWindow):
-	def __init__(self,parent=None):
-		super(MainForm, self).__init__(parent)
-		self.resize(400,200)
-		self.status = self.statusBar()
-		self.status.showMessage("這是訊息欄",3000)
-		self.setWindowTitle('PyQt5 Mainwindows 例子')
-	
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
 
-
-if __name__ == '__main__':
-	app = QApplication(sys.argv)
-	app.setWindowIcon(QIcon("images/cartoon1.ico"))
-	win = MainForm()
-	win.show()
-	sys.exit(app.exec_())
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
 
